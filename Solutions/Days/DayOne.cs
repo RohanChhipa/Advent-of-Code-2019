@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace Advent_of_Code_2019
+namespace Solutions.Days
 {
-    public class Program
+    public class DayOne
     {
-        static void Main(string[] args)
+        public void Run()
         {
             var modules = new int[]
             {
@@ -24,15 +25,15 @@ namespace Advent_of_Code_2019
             Console.WriteLine(ProblemTwo(modules));
         }
 
-        private static int ProblemTwo(IEnumerable<int> modules)
-        {
-            return modules.Select(RecursiveFuelMass).Sum();
-        }
-
-        private static int ProblemOne(IEnumerable<int> modules)
+        public int ProblemOne(IEnumerable<int> modules)
         {
             
             return modules.Select(CalculateRequiredFuel).Sum();
+        }
+
+        public int ProblemTwo(IEnumerable<int> modules)
+        {
+            return modules.Select(RecursiveFuelMass).Sum();
         }
 
         private static int CalculateRequiredFuel(int mass)
