@@ -7,7 +7,7 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            new DayOne().Run();
+            new DayTwo().Run();
         }
     }
 }
